@@ -1,19 +1,58 @@
 # Url Shortening Service
 
+Please make sure you have Docker Desktop and Postman installed.
+
+## Clone repository
+
+In terminal, go to your chosen directory and run:
+
+```
+git clone https://github.com/AsadAhmed1996/url-shortener.git
+```
+
+## Navigate inside project
+
+```
+cd url-shortener
+```
+
+## Create .env file
+
+```
+cp .env.example .env
+```
+
+## Install composer
+
+```
+composer install
+```
+
 ## Initialise docker
 
-From inside the project folder:
 ```
 ./vendor/bin/sail up
 ```
 
+## Docker desktop access
+
+Open docker desktop. Go to containers => url-shortener and open laravel.test-1. Open the terminal and run:
+
+```
+bash
+```
+
 ## Run migrations
+
+From within the laravel.test-1 terminal, run the following command:
 
 ```
 php artisan migrate
 ```
 
 ## Run PHPUnit tests
+
+To run unit tests, use the following command in the laravel.test-1 terminal:
 
 ```
 ./vendor/bin/phpunit
